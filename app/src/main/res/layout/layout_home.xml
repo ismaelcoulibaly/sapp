@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/iconContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/filterAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/bg_white_rounded_dark">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/filterAllText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/all"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/filterPant"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white_rounded_dark"
+                android:src="@drawable/jeans" />
+
+            <ImageButton
+                android:id="@+id/filterTshirt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_white_rounded_dark"
+                android:src="@drawable/tshirt"/>
+
+            <ImageButton
+                android:id="@+id/filterHoodie"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_white_rounded_dark"
+                android:src="@drawable/hoodie"/>
+
+            <ImageButton
+                android:id="@+id/filterShort"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_white_rounded_dark"
+                android:src="@drawable/shorts"/>
+
+            <ImageButton
+                android:id="@+id/filterCap"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_white_rounded_dark"
+                android:src="@drawable/cap"/>
+
+            <ImageButton
+                android:id="@+id/filterMore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_white_rounded_dark"
+                android:src="@drawable/more"/>
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeHome"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/iconContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/layout_annonce_item"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+</layout>

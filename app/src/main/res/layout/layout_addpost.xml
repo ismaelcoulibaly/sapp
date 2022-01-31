@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.75"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/addPost_capture"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/chemise"
+                    android:scaleType="fitXY"
+                    android:contentDescription="imagePrise" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="0"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_add_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="20dp"
+                        android:backgroundTint="@color/yellow"
+                        android:text="@string/takePicture"
+                        android:textColor="@color/BackgroundSplash"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/btnRotate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/bg_white_rounded_medium"
+                        android:src="@drawable/ic_rotate"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_add_img"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="490dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/addpost_titre"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_rounded"
+                    android:gravity="center"
+                    android:hint="@string/titreAnnonce"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/addpost_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/bg_white_rounded"
+                    android:gravity="center"
+                    android:hint="@string/description"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/addpost_prix"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_rounded"
+                    android:gravity="center"
+                    android:hint="@string/prixText"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <Spinner
+                    android:id="@+id/addpost_categorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.75"
+                    android:background="@color/BackgroundAnnonce"
+                    android:backgroundTint="@color/gris_clair"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/addpost_codepostal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_rounded"
+                    android:gravity="center"
+                    android:hint="@string/codePostal"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <Button
+                    android:id="@+id/addpost_btnPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin = "10dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/BackgroundSplash"
+                    android:backgroundTint="@color/yellow"
+                    android:padding="10dp"
+                    android:text="@string/publier" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
