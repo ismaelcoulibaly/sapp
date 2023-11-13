@@ -73,7 +73,7 @@ ___________ <img src="https://github.com/josue-lubaki/SAPP/blob/master/vue/profi
 
 MIT License
 
-Copyright (c) 2021 Josue Lubaki, Ismael Coulibaly and Jonathan Kanyinda
+Copyright (c) 2021 Ismael Coulibaly 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
